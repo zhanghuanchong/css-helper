@@ -1,14 +1,16 @@
 # css-helper
 CSS helper classes for fast integration and rapid development. Support less/sass.
 
-# Demo
+## Demo
 Check the page [http://zhanghuanchong.github.io/css-helper/](http://zhanghuanchong.github.io/css-helper/) to see the demo.
 
-# Install
+## Install
+
 * Bower
+
     > bower install --save css-helper-ex
     
-# License
+## License
 
 ```
 The MIT License (MIT)
