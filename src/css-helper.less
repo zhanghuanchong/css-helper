@@ -1,1 +1,217 @@
+.description {
+    font-size: 90%;
+    color: #999;
+}
 
+.notifications{
+    padding:0 10px;
+    width:100%;
+    height:200px;
+    border:2px solid #ccc;
+    overflow: hidden;
+}
+
+// Text & Link
+.text-disabled {
+    color: silver !important;
+}
+
+a.text-disabled {
+    color: silver !important;
+    &:hover, &:active, &:focus {
+        color: silver !important;
+    }
+}
+
+// Overflow
+
+.of-y-scroll {
+    overflow-y: scroll;
+}
+
+// Position
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+// Display
+.ib {
+    display: inline-block;
+}
+
+// Align
+.va-t {
+    vertical-align: top;
+}
+
+.va-m {
+    vertical-align: middle;
+}
+
+// Cursor
+.pointer {
+    cursor: pointer;
+}
+
+// Border
+.b-radius-15 {
+    border-radius: 15px;
+}
+
+// Font
+.bold {
+    font-weight: bold;
+}
+
+@font-size: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 50;
+
+.loop-font-size(length(@font-size));
+
+.loop-font-size(@n, @i: 1) when (@i =< @n) {
+    @number: extract(@font-size, @i);
+
+    .font-@{number} {
+        font-size: (@number * 1px) !important;
+    }
+
+    .loop-font-size(@n, (@i + 1));
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+// Size
+
+@sizes: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 120, 140, 150, 160, 180, 200, 250, 300;
+
+.loop-size(length(@sizes));
+
+.loop-size(@n, @i: 1) when (@i =< @n) {
+    @s: extract(@sizes, @i);
+
+    .w-@{s} {
+        width: (@s * 1px) !important;
+    }
+
+    .h-@{s} {
+        height: (@s * 1px) !important;
+    }
+
+    .min-w-@{s} {
+        min-width: (@s * 1px) !important;
+    }
+
+    .min-h-@{s} {
+        min-height: (@s * 1px) !important;
+    }
+
+    .max-w-@{s} {
+        max-width: (@s * 1px) !important;
+    }
+
+    .max-h-@{s} {
+        max-height: (@s * 1px) !important;
+    }
+
+    .loop-size(@n, (@i + 1));
+}
+
+.w-p-100 {
+    width: 100%;
+}
+
+// Float
+.float-none {
+    float: none !important;
+}
+
+// Clear
+.clear-both {
+    clear: both;
+}
+
+// Width & Height
+
+.mw-unset {
+    min-width: unset;
+}
+
+// Margin && padding
+
+@numbers: -20, -15, -10, -5, 0, 3, 5, 7, 10, 15, 20, 25, 30, 50, 70, 80, 90, 100, 120, 140;
+
+.loop-m-p(length(@numbers));
+
+.loop-m-p(@n, @i: 1) when (@i =< @n) {
+    @number: extract(@numbers, @i);
+
+    // Margin
+    .mv-@{number} {
+        margin-top: (@number * 1px) !important;
+        margin-bottom: (@number * 1px) !important;
+    }
+    .mh-@{number} {
+        margin-left: (@number * 1px) !important;
+        margin-right: (@number * 1px) !important;
+    }
+    .mt-@{number} {
+        margin-top: (@number * 1px) !important;
+    }
+    .mb-@{number} {
+        margin-bottom: (@number * 1px) !important;
+    }
+    .ml-@{number} {
+        margin-left: (@number * 1px) !important;
+    }
+    .mr-@{number} {
+        margin-right: (@number * 1px) !important;
+    }
+
+    // Padding
+    .pv-@{number} {
+        padding-top: (@number * 1px) !important;
+        padding-bottom: (@number * 1px) !important;
+    }
+    .ph-@{number} {
+        padding-left: (@number * 1px) !important;
+        padding-right: (@number * 1px) !important;
+    }
+    .pt-@{number} {
+        padding-top: (@number * 1px) !important;
+    }
+    .pb-@{number} {
+        padding-bottom: (@number * 1px) !important;
+    }
+    .pl-@{number} {
+        padding-left: (@number * 1px) !important;
+    }
+    .pr-@{number} {
+        padding-right: (@number * 1px) !important;
+    }
+
+    .loop-m-p(@n, (@i + 1));
+}
+
+// Colors
+@colors: red, silver, blue, green, white, orange, gray;
+
+.loop-color(length(@colors));
+
+.loop-color(@n, @i: 1) when (@i =< @n) {
+    @name: extract(@colors, @i);
+
+    .@{name} {
+        color: @name !important;
+    }
+
+    .bg-@{name} {
+        background-color: @name !important;
+    }
+
+    .loop-color(@n, (@i + 1));
+}
