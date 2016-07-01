@@ -1,0 +1,22 @@
+{
+  "name": "css-helper",
+  "description": "CSS helper classes developed with less for fast integration and rapid development.",
+  "main": "dist/css-helper.css",
+  "authors": [
+    "Hans Zhang <devwingcom@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "less",
+    "helper"
+  ],
+  "homepage": "https://github.com/zhanghuanchong/css-helper",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
