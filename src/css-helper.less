@@ -151,6 +151,9 @@ a.text-disabled {
     @number: extract(@numbers, @i);
 
     // Margin
+    .m-@{number} {
+        margin: (@number * 1px) !important;
+    }
     .mv-@{number} {
         margin-top: (@number * 1px) !important;
         margin-bottom: (@number * 1px) !important;
@@ -173,6 +176,9 @@ a.text-disabled {
     }
 
     // Padding
+    .p-@{number} {
+        padding: (@number * 1px) !important;
+    }
     .pv-@{number} {
         padding-top: (@number * 1px) !important;
         padding-bottom: (@number * 1px) !important;
